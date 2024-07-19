@@ -72,3 +72,7 @@ selector:
   Bestimmt Netzwerk Regeln in K3d
 
 - Zur Kontrolle: `kubectl get ingress`
+
+### Kontrolle
+
+Ihr solltet jetzt auf eurem http://localhost:8081/api die App erreichen
