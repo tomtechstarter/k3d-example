@@ -7,7 +7,7 @@
     "test": "jest",
     "prebuild": "rm -rf dist",
     "start": "NODE_PATH=./dist node dist/index.js",
-    "dev": "concurrently \"nodemon\"",
+    "dev": "nodemon",
     "build": "tsc"
   },
   "author": "Tom Schiffmann",

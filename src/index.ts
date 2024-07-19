@@ -1,10 +1,5 @@
 import express from "express";
 
-// 1. Create an interface representing a document in MongoDB.
-interface IUser {
-  username: string;
-}
-
 const app = express();
 
 app.get("/", (req, res) => {
