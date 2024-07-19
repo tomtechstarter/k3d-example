@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testapp-backend-deployment
+spec:
+  selector:
+    matchLabels:
+      app: testapp
+      tier: backend
+  replicas: 2
+  # refers to the pod
+  template:
+    metadata:
+      labels:
+        app: testapp
+        tier: backend
+    spec:
+      containers:
+        - name: testapp-backend
+          image: tomtechstarter/testapp-express-backend:latest
+          imagePullPolicy: "Always"
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "512Mi"
+            limits:
+              cpu: "1000m"
+              memory: "1024Mi"
+          ports:
+            - containerPort: 4040

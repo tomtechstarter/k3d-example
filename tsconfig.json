@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "baseUrl": "./src"
+  },
+
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  },
+  "exclude": ["./node_modules"],
+  "include": ["src"]
+}
