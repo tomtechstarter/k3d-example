@@ -7,7 +7,7 @@ spec:
     matchLabels:
       app: nextapp
       tier: frontend
-  replicas: 2
+  replicas: 1
   # refers to the pod
   template:
     metadata:

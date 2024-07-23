@@ -4,6 +4,8 @@ metadata:
   name: testapp-ingress
   annotations:
     ingress.kubernetes.io/ssl-redirect: "false"
+    kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd
 spec:
   rules:
     - http:
