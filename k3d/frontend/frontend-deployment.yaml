@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nextapp-frontend-deployment
+spec:
+  selector:
+    matchLabels:
+      app: nextapp
+      tier: frontend
+  replicas: 2
+  # refers to the pod
+  template:
+    metadata:
+      labels:
+        app: nextapp
+        tier: frontend
+    spec:
+      containers:
+        - name: testapp-frontend
+          image: tomtechstarter/testapp-frontend:latest
+          imagePullPolicy: "Always"
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "512Mi"
+            limits:
+              cpu: "1000m"
+              memory: "1024Mi"
+          ports:
+            - containerPort: 3000
